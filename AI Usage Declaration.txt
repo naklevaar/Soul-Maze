@@ -1,0 +1,44 @@
+====================================================================
+RELIANCE GAMES / ZAPAK - AI ASSISTED DEVELOPMENT DECLARATION
+====================================================================
+
+[1] ASSISTANT PROFILE
+---------------------
+* Primary AI Tool: Gemini
+* Engine Target: Unity 6 LTS (C# Backend Compilation)
+
+[2] DEVELOPMENT LOG & ASSISTED TASKS
+------------------------------------
+* Log 1 (Input Matrix): Assisted in compiling a unified physics input framework in PlayerController.cs capable
+ of parsing keyboard axes and device accelerometer vectors (Input.acceleration) conditionally based on hardware ecosystem support.
+
+* Log 2 (Camera Rig): Formatted smooth linear interpolation (Vector3.Lerp) math wrappers inside CameraManager.cs
+ to establish an automated multi-mode tracking rig with state toggle hooks.
+
+* Log 3 (State Architecture): Structured a persistent Singleton GameManager tracking player coordinate vectors
+ to handle trigger volumes (Is Trigger) for checkpoints without hardcoding scene resets.
+
+* Log 4 (AI Navigation Array): Refactored linear point-to-point path logic into a robust non-linear multi-node
+ Transform array structure using relational index tracking, completely eliminating geometric wall-clipping errors around maze corners.
+
+
+[3] RAW PROMPT METRIC EXAMPLES
+------------------------------
+* Prompt A: "Write a highly clean and optimized C# script for a Unity 6 physics-based sphere movement controller.
+ It must handle keyboard input for editor testing and mobile accelerometer tilt input for Android builds, incorporating a structural sensitivity modifier."
+
+* Prompt B: "Refactor my Unity 6 C# patrol script to use an array of Transforms (Transform[]) instead of just two points.
+ The AI obstacle needs to navigate through corners sequentially, then reverse its path array indexing when it hits the end of the route."
+
+* Prompt C: "Write a clean C# local leaderboard manager for Unity 6.
+ Create a serializable data structure class to hold player names and integer scores. The script must sort the entries in descending order, limit the container to exactly the top 5 high scores, and persist the data locally using PlayerPrefs JSON utility serialization."
+
+
+[4] INTEGRITY & VALIDATION METRIC REPORT
+----------------------------------------
+* Manual Implementation: Architecture building, hierarchy structuring, custom tile prefab creation, sprite and material asset compilation, Canvas UI positioning,
+ on-screen Event Trigger delegate binding, and fine-tuning engine variables (mass, drag, speed, thresholds) were executed completely by hand in the editor.
+
+* Technical Optimization: All rendering and camera tracking frameworks were intentionally isolated inside LateUpdate() to prevent frame jittering. 
+Physics transformations and vector forces were explicitly restricted to FixedUpdate() to guarantee platform-independent simulation reliability. Logic flags (isTriggered/cooldown filters) were engineered to block memory spikes and multi-frame duplicate data loops.
+====================================================================
